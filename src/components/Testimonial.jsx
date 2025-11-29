@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './Testimonial.css';
+import TestimoniImage from '../assets/testimoni.png';
 
 export default function Testimonial() {
   const testimonials = [
@@ -12,7 +13,7 @@ export default function Testimonial() {
       name: "Dr. Rotimi",
       title: "Co-Founder, Slate Technologies",
       location: "United Kingdom",
-      avatar: "src/assets/testimoni.png" 
+      avatar: TestimoniImage 
     },
     {
       id: 2,
@@ -21,7 +22,7 @@ export default function Testimonial() {
       name: "Dr. Benedicta",
       title: "Founder, Onikam Hair",
       location: "United Kingdom",
-      avatar: "src/assets/testimoni.png" 
+      avatar: TestimoniImage 
     },
     {
       id: 3,
@@ -30,7 +31,7 @@ export default function Testimonial() {
       name: "Dapo",
       title: "Co-Founder, Starkville Tech",
       location: "Canada",
-      avatar: "src/assets/testimoni.png" 
+      avatar: TestimoniImage 
     }
   ];
 
@@ -54,7 +55,7 @@ export default function Testimonial() {
     ));
   };
 
-  // Container animation for staggered children
+  // Container anime
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -66,7 +67,7 @@ export default function Testimonial() {
     }
   };
 
-  // Card animation variants
+  // Card anime
   const cardVariants = {
     hidden: { 
       opacity: 0, 
@@ -84,7 +85,7 @@ export default function Testimonial() {
     }
   };
 
-  // Button animation
+  // Button anime
   const buttonVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {

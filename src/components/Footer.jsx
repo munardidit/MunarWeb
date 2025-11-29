@@ -8,7 +8,6 @@ export default function Footer() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Email submitted:', email);
-    // Add your newsletter signup logic here
     setEmail('');
   };
 

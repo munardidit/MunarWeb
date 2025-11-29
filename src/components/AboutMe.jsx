@@ -1,5 +1,6 @@
 import React from 'react';
 import './AboutMe.css';
+import MunarImage from '../assets/Munar.png';
 
 export default function AboutMe() {
   return (
@@ -28,7 +29,7 @@ export default function AboutMe() {
 
           <div className="aboutme-image-wrapper">
             <img 
-              src="src/assets/Munar.png" 
+              src={MunarImage} 
               alt="Munar" 
               className="aboutme-image"
             />

@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 import React from 'react';
 import MunarNavbar from '../components/MunarNavbar';
 import BrandAccordion from '../components/BrandServices';

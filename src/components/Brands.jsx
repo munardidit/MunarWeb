@@ -1,9 +1,6 @@
-// Brands.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import './Brands.css';
-
-// Import images
 import OnikamImage from '../assets/Onikam.png';
 import SvilleCardImage from '../assets/Svillecard.png';
 import HelmetImage from '../assets/helmet.png';
@@ -27,7 +24,7 @@ export default function Brands() {
     }
   ];
 
-  // Animation variants for container
+  // container anime variant
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -39,7 +36,7 @@ export default function Brands() {
     }
   };
 
-  // Animation variants for each grid item
+  // grid anime variants
   const itemVariants = {
     hidden: { 
       opacity: 0, 
@@ -57,7 +54,7 @@ export default function Brands() {
     }
   };
 
-  // Button animation variant
+  // Button anime
   const buttonVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
