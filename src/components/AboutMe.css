@@ -1,0 +1,114 @@
+.aboutme-section {
+  background-color: #000000;
+  padding: 4rem 0;
+  position: relative;
+  font-family: "Zalando Sans Expanded", sans-serif;
+}
+
+.aboutme-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #1515E8;
+}
+
+.aboutme-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.aboutme-label {
+  color: #F2F2F9;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  font-family: "Zalando Sans Expanded", sans-serif;
+}
+
+.aboutme-content {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.aboutme-text {
+  padding-right: 2rem;
+}
+
+.aboutme-title {
+  color: #F2F2F9;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.3;
+  text-align: left;
+  margin-bottom: 2rem;
+  font-family: "Zalando Sans Expanded", sans-serif;
+}
+
+.name-highlight {
+  font-weight: 700;
+}
+
+.love-highlight {
+  color: #ECA311;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.aboutme-description {
+  color: #F2F2F9;
+  font-size: 0.775rem;
+  line-height: 1.7;
+  text-align:justify;
+  margin-bottom: 1.5rem;
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-weight:100;
+}
+
+.aboutme-image-wrapper {
+  width: 100%;
+  height: auto;
+}
+
+.aboutme-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 968px) {
+  .aboutme-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .aboutme-text {
+    padding-right: 0;
+  }
+
+  .aboutme-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .aboutme-section {
+    padding: 3rem 0;
+  }
+
+  .aboutme-title {
+    font-size: 1.75rem;
+  }
+
+  .aboutme-description {
+    font-size: 0.813rem;
+  }
+}

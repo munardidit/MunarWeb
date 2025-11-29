@@ -1,0 +1,105 @@
+.brands-section {
+  background-color: #000000;
+  padding: 4rem 0 6rem;
+  position: relative;
+  font-family: "Zalando Sans Expanded", sans-serif;
+}
+
+.brands-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #1515E8;
+}
+
+.brands-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.brands-title {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  text-align: left;
+  font-family: "Zalando Sans Expanded", sans-serif;
+}
+
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.brand-item {
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.brand-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.brand-large {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  height: 400px;
+}
+
+.brand-small {
+  grid-column: span 1;
+  grid-row: 2;
+  height: 300px;
+}
+
+.brands-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.btn-view-more {
+  background: #1515E8;
+  color: #ffffff;
+  padding: 0.875rem 3rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: "Zalando Sans Expanded", sans-serif;
+}
+
+.btn-view-more:hover {
+  background: #1515E8;
+}
+
+@media (max-width: 768px) {
+  .brands-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-large {
+    grid-column: 1;
+    height: 300px;
+  }
+
+  .brand-small {
+    grid-column: 1;
+    height: 250px;
+  }
+
+  .brands-section {
+    padding: 3rem 0 4rem;
+  }
+}

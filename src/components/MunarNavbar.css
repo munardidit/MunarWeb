@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Zalando Sans Expanded", sans-serif;;
+}
+
+
+/* Navbar*/
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  padding: 1.5rem 0;
+  transition: all 0.3s ease;
+  font-family: "Zalando Sans Expanded", sans-serif;
+}
+
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  padding: 1rem 0;
+}
+
+.navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 2.7rem;
+  position: relative;
+  top: 0.5rem;
+  width: auto;
+}
+
+.nav-links {
+  position: relative;
+  left: -3.5rem;
+  display: flex;
+  align-items: center;
+  gap: 3.6rem;
+  list-style: none;
+  font-family: "Zalando Sans Expanded", sans-serif;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a.active {
+  color: #1515E8;
+}
+
+.nav-links a:not(.active) {
+  color: #F2F2F9;
+}
+
+.nav-links a:hover {
+  color: #1515E8;
+}
+
+/* Hero*/
+.hero-section {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 8rem 2rem;
+}
+
+.hero-content {
+  max-width: 48rem;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 200;
+  line-height: 1.2;
+  margin-bottom: 4rem;
+  position: relative;
+  left:-12rem;
+  text-align: left;
+  font-style: italic;
+  color: #F2F2F9;  
+  font-family: "Zalando Sans Expanded", sans-serif;
+}
+
+.hero-title .highlight {
+  color: #ECA311;
+  font-weight: 700;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  position: relative;
+  left:12rem;
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  align-self: flex-end;
+  transition: all 0.3s ease;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #F2F2F9;
+  color: #F2F2F9;
+}
+
+.btn-outline:hover {
+  background: #F2F2F9;
+  color: #000;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #F2F2F9;
+}
+
+.btn-primary:hover {
+  background: #1515E8;
+}
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #1515E8;
+  z-index: 10;
+}
+
+.hero-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 2rem;
+  right: 2rem;
+  height: 1px;
+  background: #1515E8;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .nav-links {
+    gap: 1.5rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,161 @@
+.footer {
+  background-color: #000000;
+  padding: 3rem 0;
+  border-top: 1px solid #1f1f1f;
+  font-family: zalando-sans-expanded, sans-serif;
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1.5fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-footer {
+  height: 5.5rem;
+  width: auto;
+}
+
+.footer-center {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  left: -3rem;  
+}
+
+.footer-nav {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.footer-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 400;
+  transition: color 0.3s ease;
+  font-family: "Zalando Sans Expanded", sans-serif;
+}
+
+.footer-link:hover {
+  color: #1515E8;
+}
+
+.footer-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.newsletter-section {
+  width: 100%;
+  max-width: 400px;
+}
+
+.newsletter-title {
+  text-align: left;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  font-family: "Zalando Sans Expanded", sans-serif;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0;
+}
+
+.newsletter-input {
+  flex: 1;
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-right: none;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  outline: none;
+  font-family: "Zalando Sans Expanded", sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+.newsletter-input::placeholder {
+  color: #6b7280;
+}
+
+.newsletter-input:focus {
+  border-color: #1515E8;
+}
+
+.newsletter-button {
+  background: #1515E8;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: "Zalando Sans Expanded", sans-serif;
+  white-space: nowrap;
+}
+
+.newsletter-button:hover {
+  background: #1515E8;
+}
+
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    justify-content: center;
+  }
+
+  .footer-nav {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .newsletter-section {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-input {
+    border-right: 1px solid #2a2a2a;
+  }
+
+  .newsletter-button {
+    width: 100%;
+  }
+}

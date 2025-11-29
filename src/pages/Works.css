@@ -1,0 +1,119 @@
+/* src/pages/Works.css */
+.works-page {
+  background-color: #000000;
+  min-height: 100vh;
+}
+
+.works-hero {
+  text-align: left;
+  padding: 8rem 0 4rem;
+  position: relative;
+}
+
+.works-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #3b82f6;
+}
+
+.works-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.works-title {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  font-family: "Zalando Sans Expanded", sans-serif;
+}
+
+.works-grid {
+  display:flex;
+flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.work-card {
+  background-color: #0a0a0a;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-5px);
+}
+
+.work-image-wrapper {
+  width: 100%;
+  height:auto;
+  overflow: hidden;
+}
+
+.work-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.work-card:hover .work-image {
+  transform: scale(1.05);
+}
+
+.work-info {
+  padding: 1.5rem;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap:12rem;
+}
+
+.work-title {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  font-family: "Zalando Sans Expanded", sans-serif;
+}
+
+.work-description {
+  color: #9ca3af;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  font-family: "Zalando Sans Expanded", sans-serif;
+}
+
+.work-button {
+  background: #2563eb;
+  color: #ffffff;
+  padding: 0.625rem 1.5rem;
+  font-size: 0.813rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: "Zalando Sans Expanded", sans-serif;
+}
+
+.work-button:hover {
+  background: #1d4ed8;
+}
+
+@media (max-width: 768px) {
+  .works-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .works-hero {
+    padding: 6rem 0 3rem;
+  }
+}

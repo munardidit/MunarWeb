@@ -1,0 +1,102 @@
+.brand-accordion-container {
+  min-height: 100vh;
+  background-color: #000000;
+  color: #F2F2F9;
+  padding: 2rem;
+  font-family: zalando-sans-expanded, sans-serif;
+}
+
+.brand-accordion-wrapper {
+  max-width: 100%;
+}
+
+.brand-accordion-header {
+  font-size: 0.875rem;
+  margin-bottom: 3rem;
+  font-weight: 400;
+  text-align: left;
+}
+
+.accordion-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-item {
+  border-top: 1px solid #1515E8;
+  
+}
+
+.accordion-button {
+  width: 100%;
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 2rem 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.accordion-title-wrapper {
+  flex: 1;
+}
+
+.accordion-title {
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 0 0 0.25rem 0;
+  line-height: 1.2;
+}
+
+.accordion-subtitle {
+  font-size: 2rem;
+  font-weight: 300;
+  font-style: italic;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.accordion-icon {
+  flex-shrink: 0;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.accordion-icon.open {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  text-align: left;
+  overflow: hidden;
+}
+
+/*.accordion-content.open {
+  max-height: 12rem;
+  padding-bottom: 2rem;
+}*/
+
+.accordion-text {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  padding-right: 2.5rem;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .brand-accordion-container {
+    padding: 0rem;
+  }
+  
+  .accordion-title,
+  .accordion-subtitle {
+    font-size: 2.5rem;
+  }
+  .brand-accordion-header {
+    padding-top: 2rem;
+    
+  }
+}

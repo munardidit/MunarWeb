@@ -1,0 +1,161 @@
+.testimonial-section {
+  background-color: #000000;
+  padding: 4rem 0 6rem;
+  position: relative;
+}
+
+.testimonial-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #1515E8;
+}
+
+.testimonial-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.testimonial-heading {
+  color: #F2F2F9;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: left;
+  margin-bottom: 3rem;
+  font-family: "Zalando Sans Expanded", sans-serif;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+  background-color: #000000;
+}
+
+.testimonial-card {
+  text-align:justify;
+  background-color: #000000;
+  border: 1px solid #1f1f1f;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-rating {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  left:10rem;
+}
+
+.star {
+  color: #ECA311;
+  font-size: 1.25rem;
+  
+}
+
+.testimonial-text {
+    text-align: left;
+  color: #F2F2F9;
+  font-size: 0.813rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-weight: 300;
+}
+
+.testimonial-author {
+    text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.author-name {
+  color: #F2F2F9;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0;
+  text-align: left;
+  font-family: "Zalando Sans Expanded", sans-serif;
+}
+
+.author-title {
+  color: #F2F2F9;
+  font-size: 0.7rem;
+  margin: 0;
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-weight: 400;
+}
+
+.author-location {
+  color: #F2F2F9;
+  font-size: 0.6rem;
+  margin: 0;
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-weight: 400;
+}
+
+.testimonial-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.btn-view-more {
+  background: #1515E8;
+  color: #F2F2F9;
+  padding: 0.875rem 3rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: "Zalando Sans Expanded", sans-serif;
+}
+
+.btn-view-more:hover {
+  background: none;
+  border: 1px solid #1515E8;
+}
+
+@media (max-width: 1024px) {
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-heading {
+    font-size: 2rem;
+  }
+
+  .testimonial-section {
+    padding: 3rem 0 4rem;
+  }
+}
