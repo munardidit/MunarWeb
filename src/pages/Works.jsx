@@ -5,13 +5,11 @@ import MunarNavbar from '../components/MunarNavbar';
 import Testimonial from '../components/Testimonial';
 import Footer from '../components/Footer';
 import './Works.css';
-
-// Import images
 import OnikamImage from '../assets/Onikam.jpg';
 import SabliImage from '../assets/sabli.jpg';
 import GearImage from '../assets/gearss.jpg';
 import StarkvilleImage from '../assets/gear.jpg';
-import YaffeImage from '../assets/Yaffe.png';
+import YaffeImage from '../assets/yaffe.jpg';
 import BankImage from '../assets/bank.jpg';
 
 export default function Works() {
@@ -21,44 +19,54 @@ export default function Works() {
       title: "The Onikam Brand",
       description: "Hair & Product brand, London UK.",
       image: OnikamImage, 
-      category: "Branding"
+      category: "Branding",
+      link: "https://www.behance.net/gallery/your-onikam-link"
     },
     {
       id: 2,
       title: "The SABLI Brand",
       description: "Not-For-Profit Organization, Lagos, Nigeria.",
       image: SabliImage, 
-      category: "Design"
+      category: "Design",
+      link: "https://www.behance.net/gallery/your-sabli-link"
     },
     {
       id: 3,
-      title: "Slate Technologies",
-      description: "Tech and Gadget brand, London, UK",
+      title: "PrimeEdge Resources",
+      description: "Construction Development Company, London UK.",
       image: GearImage, 
-      category: "Tech"
+      category: "Tech",
+      link: "https://www.behance.net/gallery/your-primeedge-link"
     },
     {
       id: 4,
-      title: "Starkville Tech",
-      description: "Tech & Business Transformation, Ontario, Canada",
+      title: "Slate Technologies",
+      description: "Tech and Gadget Brand, London UK.",
       image: StarkvilleImage, 
-      category: "Tech"
+      category: "Tech",
+      link: "https://www.behance.net/gallery/230823765/Brand-Design-For-Slate"
     },
     {
       id: 5,
       title: "Yaffe Skin Brand",
       description: "Skin care brand, Lagos Nigeria",
-      image: YaffeImage, 
-      category: "Beauty"
+      image: YaffeImage,
+      category: "Beauty",
+      link: "https://www.behance.net/gallery/your-yaffe-link"
     },
     {
       id: 6,
       title: "The Tellar Brand",
       description: "Finance Brand, Dummy Project.",
       image: BankImage, 
-      category: "Finance"
+      category: "Finance",
+      link: "https://www.behance.net/gallery/your-tellar-link"
     }
   ];
+
+  const handleProjectClick = (link) => {
+    window.open(link, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <div className="works-page">
@@ -129,10 +137,11 @@ export default function Works() {
                     transition={{ duration: 0.4, delay: 0.6 + (index * 0.1) }}
                     whileHover={{ 
                       scale: 1.05,
-                      backgroundColor: "#1d4ed8",
-                      boxShadow: "0 5px 15px rgba(37, 99, 235, 0.4)"
+                      backgroundColor: "#1515E8",
+                      boxShadow: "0 5px 15px rgba(21, 21, 232, 0.4)"
                     }}
                     whileTap={{ scale: 0.95 }}
+                    onClick={() => handleProjectClick(project.link)}
                   >
                     View Project
                   </motion.button>
