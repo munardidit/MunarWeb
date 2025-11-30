@@ -8,9 +8,18 @@ import Testimonial from '../components/Testimonial';
 import Footer from '../components/Footer';
 
 export default function Home() {
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const words = ['Different!', 'Unique!', 'Memorable!', 'Functional!', 'Bold!'];
 
-  // Hero title animation
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [words.length]);
+
+  // Hero title animation variants
   const titleVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -24,20 +33,31 @@ export default function Home() {
     }
   };
 
-  // Credit roll loop
-  const creditRollVariants = {
+  const wordVariants = {
+    initial: {
+      y: 100,
+      opacity: 0,
+      rotateX: 45,
+      scale: 0.8
+    },
     animate: {
-      y: ["0%", "-50%"],
+      y: 0,
+      opacity: 1,
+      rotateX: 0,
+      scale: 1,
       transition: {
-        y: {
-          repeat: Infinity,
-          repeatType: "loop",
-          duration: words.length * 2.5,
-          ease: "linear"
-        }
+        duration: 0.5,
+        ease: [0.22, 1, 0.36, 1]
       }
-    }
-  };
+    },
+    exit: {
+  opacity: 2,
+    transition: {
+      duration: 1.0,
+      ease: "easeIn"
+}
+  }
+};
 
   // Button animation
   const buttonContainerVariants = {
@@ -80,42 +100,43 @@ export default function Home() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                In times where brands<br />
-                looks & Feel The same,<br />
+                In a time when brands <br/> look and feel the same,<br />
               </motion.span>
-              <span className="highlight-wrapper" style={{ 
-                display: 'inline-block',
-                position: 'relative',
-                height: '1em',
-                overflow: 'hidden',
-                verticalAlign: 'baseline',
-                minWidth: '200px'
-                
+              <span style={{ 
+                display: 'inline-flex',
+                alignItems: 'baseline',
+                gap: '0.3em'
               }}>
-                Be{' '}
-                <motion.div
-                  variants={creditRollVariants}
-                  animate="animate"
-                  style={{ 
-                    display: 'inline-flex',
-                    flexDirection: 'column',
-                    left: '2.5em',
-                    top: 0
-                  }}
-                >
-                  {[...words, ...words].map((word, index) => (
-                    <span
-                      key={index}
+                <span>Be</span>
+                <span style={{ 
+                  display: 'inline-block',
+                  position: 'relative',
+                  height: '1.2em',
+                  width: '390px',
+                  overflow: 'hidden',
+                  perspective: '1000px',
+                  perspectiveOrigin: 'center bottom'
+                }}>
+                  <AnimatePresence mode="wait">
+                    <motion.span
+                      key={currentWordIndex}
+                      variants={wordVariants}
+                      initial="initial"
+                      animate="animate"
+                      exit="exit"
                       className="highlight"
                       style={{ 
-                        display: 'block',
-                        whiteSpace: 'nowrap'
+                        left: 0,
+                        top: 0,
+                        whiteSpace: 'nowrap',
+                        transformStyle: 'preserve-3d',
+                        transformOrigin: 'center center'
                       }}
                     >
-                      {word}
-                    </span>
-                  ))}
-                </motion.div>
+                      {words[currentWordIndex]}
+                    </motion.span>
+                  </AnimatePresence>
+                </span>
               </span>
             </motion.h1>
 
