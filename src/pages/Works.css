@@ -34,8 +34,8 @@
 }
 
 .works-grid {
-  display:flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
   margin-bottom: 4rem;
 }
@@ -44,6 +44,7 @@ flex-direction: column;
   background-color: #0a0a0a;
   overflow: hidden;
   transition: transform 0.3s ease;
+  border-radius: 8px;
 }
 
 .work-card:hover {
@@ -52,7 +53,7 @@ flex-direction: column;
 
 .work-image-wrapper {
   width: 100%;
-  height:auto;
+  height: auto;
   overflow: hidden;
 }
 
@@ -69,11 +70,16 @@ flex-direction: column;
 
 .work-info {
   padding: 1.5rem;
-  display: inline-flex;
-  flex-direction: row;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  gap:12rem;
+  width: 100%;
+  gap: 1rem;
+}
+
+.work-text-content {
+  flex: 1;
+  min-width: 0;
 }
 
 .work-title {
@@ -87,7 +93,7 @@ flex-direction: column;
 .work-description {
   color: #9ca3af;
   font-size: 0.875rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   font-family: "Zalando Sans Expanded", sans-serif;
 }
 
@@ -101,6 +107,9 @@ flex-direction: column;
   cursor: pointer;
   transition: background 0.3s ease;
   font-family: "Zalando Sans Expanded", sans-serif;
+  white-space: nowrap;
+  flex-shrink: 0;
+  border-radius: 4px;
 }
 
 .work-button:hover {
@@ -108,11 +117,42 @@ flex-direction: column;
 }
 
 @media (max-width: 768px) {
-  .works-grid {
-    grid-template-columns: 1fr;
+  .works-container {
+    padding: 0 1rem;
   }
-
+  
   .works-hero {
     padding: 6rem 0 3rem;
+  }
+  
+  .work-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .work-button {
+    align-self: flex-end;
+    margin-top: 0.5rem;
+  }
+  
+  .works-title {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .works-hero {
+    padding: 5rem 0 2rem;
+  }
+  
+  .work-info {
+    padding: 1rem;
+  }
+  
+  .work-button {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.75rem;
   }
 }

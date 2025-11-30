@@ -24,7 +24,11 @@
 
 .accordion-item {
   border-top: 1px solid #1515E8;
-  
+}
+
+/* Last blue line */
+.accordion-list .accordion-item:last-child {
+  border-bottom: 1px solid #1515E8;
 }
 
 .accordion-button {
@@ -74,16 +78,15 @@
   overflow: hidden;
 }
 
-/*.accordion-content.open {
-  max-height: 12rem;
-  padding-bottom: 2rem;
-}*/
-
 .accordion-text {
   font-size: 1.28rem;
   line-height: 1.6;
   padding-right: 2.5rem;
   margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -95,8 +98,30 @@
   .accordion-subtitle {
     font-size: 2.5rem;
   }
+  
   .brand-accordion-header {
     padding-top: 2rem;
-    
+  }
+  
+  .accordion-text {
+    max-width: 90%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 767px) {
+  .accordion-text {
+    font-size: 1.1rem;
+    padding-right: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
+  
+  .accordion-title,
+  .accordion-subtitle {
+    font-size: 1.5rem;
   }
 }

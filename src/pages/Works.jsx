@@ -1,4 +1,3 @@
-// src/pages/Works.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import MunarNavbar from '../components/MunarNavbar';
@@ -112,23 +111,25 @@ export default function Works() {
                 <motion.div 
                   className="work-info"
                 >
-                  <motion.h3 
-                    className="work-title"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: 0.4 + (index * 0.1) }}
-                  >
-                    {project.title}
-                  </motion.h3>
-                  
-                  <motion.p 
-                    className="work-description"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: 0.5 + (index * 0.1) }}
-                  >
-                    {project.description}
-                  </motion.p>
+                  <div className="work-text-content">
+                    <motion.h3 
+                      className="work-title"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, delay: 0.4 + (index * 0.1) }}
+                    >
+                      {project.title}
+                    </motion.h3>
+                    
+                    <motion.p 
+                      className="work-description"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, delay: 0.5 + (index * 0.1) }}
+                    >
+                      {project.description}
+                    </motion.p>
+                  </div>
                   
                   <motion.button 
                     className="work-button"

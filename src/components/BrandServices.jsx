@@ -80,7 +80,7 @@ export default function BrandAccordion() {
       }
     },
     expanded: { 
-      height: "auto",
+      height: "15vh",
       opacity: 1,
       transition: {
         height: {
