@@ -8,18 +8,9 @@ import Testimonial from '../components/Testimonial';
 import Footer from '../components/Footer';
 
 export default function Home() {
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const words = ['Different!', 'Unique!', 'Memorable!', 'Functional!', 'Bold!'];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, 2500); 
-
-    return () => clearInterval(interval);
-  }, []);
-
-  // Hero title animation variants
+  // Hero title animation
   const titleVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -33,29 +24,17 @@ export default function Home() {
     }
   };
 
-  // changing words 
-  const wordVariants = {
-    enter: {
-      y: 20,
-      opacity: 0,
-      scale: 0.9
-    },
-    center: {
-      y: 0,
-      opacity: 1,
-      scale: 1,
+  // Credit roll loop
+  const creditRollVariants = {
+    animate: {
+      y: ["0%", "-50%"],
       transition: {
-        duration: 0.5,
-        ease: [0.22, 1, 0.36, 1]
-      }
-    },
-    exit: {
-      y: -20,
-      opacity: 0,
-      scale: 0.9,
-      transition: {
-        duration: 0.4,
-        ease: [0.22, 1, 0.36, 1]
+        y: {
+          repeat: Infinity,
+          repeatType: "loop",
+          duration: words.length * 2.5,
+          ease: "linear"
+        }
       }
     }
   };
@@ -104,21 +83,39 @@ export default function Home() {
                 In times where brands<br />
                 looks & Feel The same,<br />
               </motion.span>
-              <span className="highlight-wrapper">
+              <span className="highlight-wrapper" style={{ 
+                display: 'inline-block',
+                position: 'relative',
+                height: '1em',
+                overflow: 'hidden',
+                verticalAlign: 'baseline',
+                minWidth: '200px'
+                
+              }}>
                 Be{' '}
-                <AnimatePresence mode="wait">
-                  <motion.span
-                    key={currentWordIndex}
-                    variants={wordVariants}
-                    initial="enter"
-                    animate="center"
-                    exit="exit"
-                    className="highlight"
-                    style={{ display: 'inline-block' }}
-                  >
-                    {words[currentWordIndex]}
-                  </motion.span>
-                </AnimatePresence>
+                <motion.div
+                  variants={creditRollVariants}
+                  animate="animate"
+                  style={{ 
+                    display: 'inline-flex',
+                    flexDirection: 'column',
+                    left: '2.5em',
+                    top: 0
+                  }}
+                >
+                  {[...words, ...words].map((word, index) => (
+                    <span
+                      key={index}
+                      className="highlight"
+                      style={{ 
+                        display: 'block',
+                        whiteSpace: 'nowrap'
+                      }}
+                    >
+                      {word}
+                    </span>
+                  ))}
+                </motion.div>
               </span>
             </motion.h1>
 
@@ -133,7 +130,7 @@ export default function Home() {
                 variants={buttonVariants}
                 whileHover={{ 
                   scale: 1.05,
-                  backgroundColor: "#fff",
+                  backgroundColor: "#F2F2F9",
                   color: "#000"
                 }}
                 whileTap={{ scale: 0.95 }}
@@ -145,7 +142,7 @@ export default function Home() {
                 variants={buttonVariants}
                 whileHover={{ 
                   scale: 1.05,
-                  backgroundColor: "#1d4ed8",
+                  backgroundColor: "#1515E8",
                   boxShadow: "0 5px 20px rgba(37, 99, 235, 0.4)"
                 }}
                 whileTap={{ scale: 0.95 }}

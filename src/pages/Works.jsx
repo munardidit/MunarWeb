@@ -7,26 +7,26 @@ import Footer from '../components/Footer';
 import './Works.css';
 
 // Import images
-import OnikamImage from '../assets/Onikam.png';
-import SabliImage from '../assets/sabli.png';
-import GearImage from '../assets/Gear.png';
-import StarkvilleImage from '../assets/starkville.png';
+import OnikamImage from '../assets/Onikam.jpg';
+import SabliImage from '../assets/sabli.jpg';
+import GearImage from '../assets/gearss.jpg';
+import StarkvilleImage from '../assets/gear.jpg';
 import YaffeImage from '../assets/Yaffe.png';
-import BankImage from '../assets/Bank.png';
+import BankImage from '../assets/bank.jpg';
 
 export default function Works() {
   const projects = [
     {
       id: 1,
       title: "The Onikam Brand",
-      description: "Not-For-Profit Organization, Lagos, Nigeria.",
+      description: "Hair & Product brand, London UK.",
       image: OnikamImage, 
       category: "Branding"
     },
     {
       id: 2,
       title: "The SABLI Brand",
-      description: "This is Lorem ipsum sit dolor amet",
+      description: "Not-For-Profit Organization, Lagos, Nigeria.",
       image: SabliImage, 
       category: "Design"
     },
@@ -56,7 +56,7 @@ export default function Works() {
       title: "The Tellar Brand",
       description: "Finance Brand, Dummy Project.",
       image: BankImage, 
-      category: "Fashion"
+      category: "Finance"
     }
   ];
 
@@ -134,7 +134,7 @@ export default function Works() {
                     }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    View more
+                    View Project
                   </motion.button>
                 </motion.div>
               </motion.div>

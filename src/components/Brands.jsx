@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './Brands.css';
-import OnikamImage from '../assets/Onikam.png';
-import SvilleCardImage from '../assets/Svillecard.png';
-import HelmetImage from '../assets/helmet.png';
+import OnikamImage from '../assets/Onikam.jpg';
+import SvilleCardImage from '../assets/Pedge49.jpg';
+import HelmetImage from '../assets/head.jpg';
 
 export default function Brands() {
   const brandImages = [

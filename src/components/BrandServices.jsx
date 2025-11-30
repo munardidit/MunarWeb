@@ -27,6 +27,15 @@ export default function BrandAccordion() {
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+
+  const handleMouseEnter = (index) => {
+    setOpenIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setOpenIndex(null);
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -87,7 +96,7 @@ export default function BrandAccordion() {
     }
   };
 
-  // Icon rotation animation
+  // Icon animation
   const iconVariants = {
     closed: { 
       rotate: 0,
@@ -124,6 +133,8 @@ export default function BrandAccordion() {
               key={index} 
               className="accordion-item"
               variants={itemVariants}
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
             >
               <motion.button
                 onClick={() => toggleAccordion(index)}
