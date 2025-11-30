@@ -38,7 +38,7 @@ export default function BrandAccordion() {
     }
   };
 
-  // Individual accordion item animation
+  
   const itemVariants = {
     hidden: { 
       opacity: 0, 
@@ -54,7 +54,7 @@ export default function BrandAccordion() {
     }
   };
 
-  // Content dropdown animation
+  // Content dropdown anime
   const contentVariants = {
     collapsed: { 
       height: 0,

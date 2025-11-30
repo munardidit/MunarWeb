@@ -2,6 +2,7 @@
   background-color: #000000;
   padding: 4rem 0 6rem;
   position: relative;
+  top: -4rem;
   font-family: "Zalando Sans Expanded", sans-serif;
 }
 
@@ -23,7 +24,7 @@
 
 .brands-title {
   color: #ffffff;
-  font-size: 1rem;
+  font-size: 1.35rem;
   font-weight: 400;
   margin-bottom: 3rem;
   text-align: left;
