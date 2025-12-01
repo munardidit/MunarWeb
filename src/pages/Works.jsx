@@ -19,7 +19,7 @@ export default function Works() {
       description: "Hair & Product brand, London UK.",
       image: OnikamImage, 
       category: "Branding",
-      link: "https://www.behance.net/gallery/your-onikam-link"
+      link: "https://www.behance.net/gallery/237214759/Hair-Brand-Design-for-Onikam"
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ export default function Works() {
       description: "Not-For-Profit Organization, Lagos, Nigeria.",
       image: SabliImage, 
       category: "Design",
-      link: "https://www.behance.net/gallery/your-sabli-link"
+      link: "https://www.behance.net/gallery/237662241/SABLI-Brand-design-%28NGO%29"
     },
     {
       id: 3,
@@ -35,7 +35,7 @@ export default function Works() {
       description: "Construction Development Company, London UK.",
       image: GearImage, 
       category: "Tech",
-      link: "https://www.behance.net/gallery/your-primeedge-link"
+      link: "https://www.behance.net/gallery/239334039/Brand-Design-for-construction-company-PRIMEEDGE"
     },
     {
       id: 4,
@@ -51,7 +51,7 @@ export default function Works() {
       description: "Skin care brand, Lagos Nigeria",
       image: YaffeImage,
       category: "Beauty",
-      link: "https://www.behance.net/gallery/your-yaffe-link"
+      link: "https://www.behance.net/gallery/180153777/SKIN-CARE-BRAND-%28Yaffe-Skin%29-Logo-Design"
     },
     {
       id: 6,
@@ -59,7 +59,7 @@ export default function Works() {
       description: "Finance Brand, Dummy Project.",
       image: BankImage, 
       category: "Finance",
-      link: "https://www.behance.net/gallery/your-tellar-link"
+      link: "https://www.behance.net/gallery/195148917/Tellar-Branding"
     }
   ];
 

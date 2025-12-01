@@ -6,6 +6,7 @@ import logo from '../assets/Newmunar.png';
 
 export default function MunarNavbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -17,38 +18,100 @@ export default function MunarNavbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-      <div className="navbar-container">
-        <Link to="/" className="logo-container">
-          <img src={logo} alt="Munar Logo" className="logo" />
-        </Link>
+  useEffect(() => {
+    // Close menu when route changes
+    setMenuOpen(false);
+  }, [location]);
 
-        <ul className="nav-links">
-          <li>
-            <Link 
-              to="/" 
-              className={location.pathname === '/' ? 'active' : ''}
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link 
-              to="/works" 
-              className={location.pathname === '/works' ? 'active' : ''}
-            >
-              Work
-            </Link>
-          </li>
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+  useEffect(() => {
+    // Handle body scroll lock when menu is open
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    // Handle escape key press
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') {
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('keydown', handleEscape);
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = ''; // Cleanup on unmount
+    };
+  }, [menuOpen]);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
+  return (
+    <>
+      <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+        <div className="navbar-container">
+          <Link to="/" className="logo-container" onClick={closeMenu}>
+            <img src={logo} alt="Munar Logo" className="logo" />
+          </Link>
+
+          {/* Hamburger Button */}
+          <button 
+            className={`hamburger ${menuOpen ? 'active' : ''}`}
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+            aria-expanded={menuOpen}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          {/* Mobile Menu Overlay */}
+          <div 
+            className={`menu-overlay ${menuOpen ? 'active' : ''}`}
+            onClick={closeMenu}
+          />
+
+          {/* Navigation Links */}
+          <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
+            <li>
+              <Link 
+                to="/" 
+                className={location.pathname === '/' ? 'active' : ''}
+                onClick={closeMenu}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/works" 
+                className={location.pathname === '/works' ? 'active' : ''}
+                onClick={closeMenu}
+              >
+                Work
+              </Link>
+            </li>
+            <li>
+              <a href="#about" onClick={closeMenu}>
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#contact" onClick={closeMenu}>
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </>
   );
 }

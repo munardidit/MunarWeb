@@ -12,10 +12,10 @@ export default function Footer() {
   };
 
   const socialLinks = [
-    { name: 'Behance', url: '#' },
-    { name: 'Instagram', url: '#' },
-    { name: 'Twitter', url: '#' },
-    { name: 'LinkedIn', url: '#' }
+    { name: 'Behance', url: 'https://www.behance.net/clintonmunarkalu' },
+    { name: 'Instagram', url: 'https://www.instagram.com/munardidit?igsh=MWo4a3gwdHhvcWd0MQ==' },
+    { name: 'Twitter', url: 'https://x.com/munardidit?t=1I-ATaVoBYPjudi9XF3xRw&s=08' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/clinton-kalu-08322a151?utm_source=share_via&utm_content=profile&utm_medium=member_android' }
   ];
 
   return (

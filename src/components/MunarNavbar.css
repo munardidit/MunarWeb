@@ -192,7 +192,7 @@
 @media (min-width: 768px) {
   .hero-title {
     font-size: 3rem;
-    left: -6rem;
+    left: -16rem;
   }
   .button-group {
   display: flex;
