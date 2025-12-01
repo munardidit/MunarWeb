@@ -1,5 +1,4 @@
 .brand-accordion-container {
-  min-height: 100vh;
   background-color: #000000;
   color: #F2F2F9;
   padding: 2rem;
@@ -79,7 +78,7 @@
 }
 
 .accordion-text {
-  font-size: 1.28rem;
+  font-size: 1.23rem;
   line-height: 1.6;
   padding-right: 2.5rem;
   margin: 0;
@@ -89,6 +88,12 @@
   width: 100%;
 }
 
+@media (max-width: 480px){
+  .accordion-item {
+  border-top: 1px solid #1515E8;
+  width: ;
+}
+}
 @media (min-width: 768px) {
   .brand-accordion-container {
     padding: 0rem;

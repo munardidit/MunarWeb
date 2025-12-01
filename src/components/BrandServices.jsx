@@ -15,7 +15,7 @@ export default function BrandAccordion() {
     {
       title: "Overall Brand Design",
       subtitle: "or Redesign.",
-      content: "This one here covers both the look and personality or characteristics of your brand and how it relates to your customers. Your Mission, goals, values, your target audience, and the entire strategy to approach them"
+      content: "This one here covers both the look and personality or characteristics of your brand and how it relates to your customers. Your Mission, goals, values, your target audience, and the entire strategy to approach them."
     },
     {
       title: "Help brands stay Consistent visually...",

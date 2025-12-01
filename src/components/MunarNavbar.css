@@ -188,9 +188,68 @@
   background: #1515E8;
 }
 
-@media (max-width: 768px) {
+
+@media (min-width: 768px) {
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    left: -6rem;
+  }
+  .button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  position: relative;
+  left:4rem;
+}
+.btn {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  width: 45%;
+  align-self: flex-end;
+  transition: all 0.3s ease;
+}
+}
+
+@media (max-width: 480px){
+ .hero-title {
+    font-size: 1.7rem;
+    position: relative;
+    left: -3rem;
+  }
+  .button-group {
+    flex-direction: column;
+  }
+ .button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  position: relative;
+  left:-7rem;
+}
+.btn {
+  padding: 0.75rem 2rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  width: 40%;
+  align-self: flex-end;
+  transition: all 0.3s ease;
+}
+}
+
+/*@media (max-width: 768px) {
+  .hero-title {
+    font-size: 1.9rem;
+    position: relative;
+    left: 0rem;
   }
 
   .nav-links {
