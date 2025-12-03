@@ -1,4 +1,3 @@
-// src/components/MunarNavbar.jsx
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './MunarNavbar.css';
@@ -19,16 +18,14 @@ export default function MunarNavbar() {
   }, []);
 
   useEffect(() => {
-    // Close menu when route changes
     setMenuOpen(false);
   }, [location]);
 
   useEffect(() => {
-    // Handle body scroll lock when menu is open
     if (menuOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.classList.add('menu-open');
     } else {
-      document.body.style.overflow = '';
+      document.body.classList.remove('menu-open');
     }
 
     // Handle escape key press
@@ -41,7 +38,7 @@ export default function MunarNavbar() {
     document.addEventListener('keydown', handleEscape);
     return () => {
       document.removeEventListener('keydown', handleEscape);
-      document.body.style.overflow = ''; // Cleanup on unmount
+      document.body.classList.remove('menu-open'); 
     };
   }, [menuOpen]);
 
@@ -77,6 +74,7 @@ export default function MunarNavbar() {
           <div 
             className={`menu-overlay ${menuOpen ? 'active' : ''}`}
             onClick={closeMenu}
+            aria-hidden="true"
           />
 
           {/* Navigation Links */}
