@@ -315,7 +315,7 @@
   margin-top: 3rem;
   flex-wrap: wrap;
   position: relative;
-  left:4rem;
+  left:15rem;
 }
 .btn {
   padding: 0.75rem 2rem;
@@ -323,7 +323,7 @@
   font-weight: 500;
   border: none;
   cursor: pointer;
-  width: 45%;
+  width: 35%;
   align-self: flex-end;
   transition: all 0.3s ease;
 }
