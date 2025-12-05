@@ -91,8 +91,10 @@
 @media (max-width: 480px){
   .accordion-item {
   border-top: 1px solid #1515E8;
-  width: ;
+  width:100%;
 }
+
+
 }
 @media (min-width: 768px) {
   .brand-accordion-container {
@@ -117,8 +119,9 @@
 }
 
 @media (max-width: 767px) {
+  
   .accordion-text {
-    font-size: 1.1rem;
+    font-size: 0.7rem;
     padding-right: 1rem;
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -127,6 +130,6 @@
   
   .accordion-title,
   .accordion-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
