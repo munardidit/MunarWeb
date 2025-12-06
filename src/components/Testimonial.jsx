@@ -3,17 +3,18 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import './Testimonial.css';
 import TestimoniImage from '../assets/testimoni.png';
+import TestimoniImage2 from '../assets/reed.jpg';
 
 export default function Testimonial() {
   const testimonials = [
     {
       id: 1,
       rating: 5,
-      text: "Lorem ipsum dolor sit amet, consect etur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor sit amet, consect etur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolor sit etur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-      name: "Dr. Rotimi",
-      title: "Co-Founder, Slate Technologies",
-      location: "United Kingdom",
-      avatar: TestimoniImage 
+      text: "Working with MUNAR was a breath of fresh air. He took the rough, practical world of construction and turned it into a brand identity that feels strong, modern, and genuinely ours. The attention to detail was clear in every step, and the final result exceeded what I imagined. If you want someone who listens, understands your vision, and delivers something that stands out, I’d confidently recommend his services. 10/10.",
+      name: "Reed Afuape",
+      title: "Founder Travumax ",
+      location: "Lagos State, Nigeria",
+      avatar: TestimoniImage2 
     },
     {
       id: 2,

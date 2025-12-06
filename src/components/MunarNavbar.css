@@ -150,7 +150,7 @@
 
 .btn-outline {
   background: transparent;
-  border: 2px solid #F2F2F9;
+  border: 1px solid #F2F2F9;
   color: #F2F2F9;
 }
 
@@ -162,6 +162,7 @@
 .btn-primary {
   background: #1515E8;
   color: #F2F2F9;
+ 
 }
 
 .btn-primary:hover {
@@ -305,7 +306,7 @@
 
 @media (min-width: 768px) {
   .hero-title {
-    font-size: 3rem;
+    font-size: 3.5rem;
     left: -16rem;
   }
   .button-group {
@@ -317,7 +318,7 @@
   position: relative;
   left:15rem;
 }
-.btn {
+/*.btn {
   padding: 0.75rem 2rem;
   font-size: 1rem;
   font-weight: 500;
@@ -326,7 +327,7 @@
   width: 35%;
   align-self: flex-end;
   transition: all 0.3s ease;
-}
+}*/
 }
 
 @media (max-width: 480px){
@@ -348,15 +349,15 @@
   margin-top: 3rem;
   flex-wrap: wrap;
   position: relative;
-  left:-7rem;
+  left:-8rem;
 }
 .btn {
   padding: 0.75rem 2rem;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 500;
-  border: none;
+  border: 1px solid #F2F2F9;
   cursor: pointer;
-  width: 40%;
+  width: 35%;
   align-self: flex-end;
   transition: all 0.3s ease;
 }
