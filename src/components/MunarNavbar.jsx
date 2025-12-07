@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './MunarNavbar.css';
 import logo from '../assets/Newmunar.png';
 
@@ -7,6 +7,7 @@ export default function MunarNavbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +20,18 @@ export default function MunarNavbar() {
 
   useEffect(() => {
     setMenuOpen(false);
+  }, [location]);
+
+  useEffect(() => {
+    // Handle scrolling to section if hash is present
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
   }, [location]);
 
   useEffect(() => {
@@ -48,6 +61,23 @@ export default function MunarNavbar() {
 
   const closeMenu = () => {
     setMenuOpen(false);
+  };
+
+  const handleSectionClick = (e, sectionClass) => {
+    e.preventDefault();
+    closeMenu();
+
+    // If we're not on the homepage, navigate there first with hash
+    if (location.pathname !== '/') {
+      navigate(`/#${sectionClass}`);
+      return;
+    }
+
+    // If we're on the homepage, scroll to the section
+    const element = document.querySelector(`.${sectionClass}`);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   return (
@@ -98,12 +128,18 @@ export default function MunarNavbar() {
               </Link>
             </li>
             <li>
-              <a href="#about" onClick={closeMenu}>
+              <a 
+                href="#aboutme-section" 
+                onClick={(e) => handleSectionClick(e, 'aboutme-section')}
+              >
                 About
               </a>
             </li>
             <li>
-              <a href="#contact" onClick={closeMenu}>
+              <a 
+                href="#footer" 
+                onClick={(e) => handleSectionClick(e, 'footer')}
+              >
                 Contact
               </a>
             </li>
