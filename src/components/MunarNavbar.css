@@ -363,3 +363,14 @@
 }
 }
 
+@media (min-width: 280px) and (max-width: 320px) { 
+  .hero-title {
+    font-size: 1rem;
+    left: -2rem;
+  }
+  .button-group {
+    flex-direction: column;
+    position: relative;
+    left: -6rem;
+  } 
+}
