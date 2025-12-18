@@ -5,7 +5,6 @@
   font-family: "Zalando Sans Expanded", sans-serif;
 }
 
-
 .brands-container {
   max-width: 1280px;
   margin: 0 auto;
@@ -75,24 +74,112 @@
   background: #1515E8;
 }
 
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .brands-container {
+    padding: 0 1.5rem;
+  }
+
+  .brand-large {
+    height: 350px;
+  }
+
+  .brand-small {
+    height: 280px;
+  }
+}
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
+  .brands-section {
+    padding: 3rem 0 4rem;
+  }
+
+  .brands-container {
+    padding: 0 1.5rem;
+  }
+
+  .brands-title {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
   .brands-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .brand-large {
     grid-column: 1;
-    height: 300px;
+    height: 280px;
   }
 
   .brand-small {
     grid-column: 1;
-    height: 250px;
+    grid-row: auto;
+    height: 240px;
   }
-brands-container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 2rem;
+
+  .brands-button-wrapper {
+    margin-top: 2rem;
+  }
+
+  .btn-view-more {
+    padding: 0.75rem 2.5rem;
+    font-size: 0.813rem;
+  }
 }
- 
+
+/* Small Mobile Responsive */
+@media (max-width: 480px) {
+  .brands-section {
+    padding: 2.5rem 0 3rem;
+  }
+
+  .brands-container {
+    padding: 0 1rem;
+  }
+
+  .brands-title {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .brands-grid {
+    gap: 0.75rem;
+  }
+
+  .brand-large {
+    height: 220px;
+  }
+
+  .brand-small {
+    height: 200px;
+  }
+
+  .btn-view-more {
+    padding: 0.7rem 2rem;
+    font-size: 0.75rem;
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+  .brands-container {
+    padding: 0 0.875rem;
+  }
+
+  .brand-large {
+    height: 200px;
+  }
+
+  .brand-small {
+    height: 180px;
+  }
+
+  .brands-title {
+    font-size: 1rem;
+  }
 }

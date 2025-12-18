@@ -4,14 +4,18 @@ import './MunarNavbar.css';
 import logo from '../assets/Newmunar.png';
 
 export default function MunarNavbar() {
-  const [scrolled, setScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -81,12 +85,14 @@ export default function MunarNavbar() {
   };
 
   return (
-    <>
-      <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-        <div className="navbar-container">
-          <Link to="/" className="logo-container" onClick={closeMenu}>
-            <img src={logo} alt="Munar Logo" className="logo" />
-          </Link>
+    <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}>
+      <div className="navbar-container">
+        <div className="navbar-content">
+          <div className="navbar-logo">
+            <Link to="/" onClick={closeMenu}>
+              <img src={logo} alt="Munar Logo" />
+            </Link>
+          </div>
 
           {/* Hamburger Button */}
           <button 
@@ -108,44 +114,36 @@ export default function MunarNavbar() {
           />
 
           {/* Navigation Links */}
-          <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
-            <li>
-              <Link 
-                to="/" 
-                className={location.pathname === '/' ? 'active' : ''}
-                onClick={closeMenu}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link 
-                to="/works" 
-                className={location.pathname === '/works' ? 'active' : ''}
-                onClick={closeMenu}
-              >
-                Work
-              </Link>
-            </li>
-            <li>
-              <a 
-                href="#aboutme-section" 
-                onClick={(e) => handleSectionClick(e, 'aboutme-section')}
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a 
-                href="#footer" 
-                onClick={(e) => handleSectionClick(e, 'footer')}
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
+          <div className={`navbar-links ${menuOpen ? 'active' : ''}`}>
+            <Link 
+              to="/" 
+              className={location.pathname === '/' ? 'active' : ''}
+              onClick={closeMenu}
+            >
+              Home
+            </Link>
+            <Link 
+              to="/works" 
+              className={location.pathname === '/works' ? 'active' : ''}
+              onClick={closeMenu}
+            >
+              Work
+            </Link>
+            <a 
+              href="#aboutme-section" 
+              onClick={(e) => handleSectionClick(e, 'aboutme-section')}
+            >
+              About
+            </a>
+            <a 
+              href="#footer" 
+              onClick={(e) => handleSectionClick(e, 'footer')}
+            >
+              Contact
+            </a>
+          </div>
         </div>
-      </nav>
-    </>
+      </div>
+    </nav>
   );
 }
