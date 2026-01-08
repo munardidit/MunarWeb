@@ -95,8 +95,13 @@
 }
 
 
+
 }
 @media (min-width: 768px) {
+  .brand-accordion-wrapper {
+  max-width: 100%;
+}
+
   .brand-accordion-container {
     padding: 0rem;
   }
