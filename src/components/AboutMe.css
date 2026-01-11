@@ -100,12 +100,15 @@
 }
 
 @media (max-width: 640px) {
+  .aboutme-container {
+  padding: 0;
+}
   .aboutme-section {
     padding: 3rem 0;
   }
 
   .aboutme-title {
-    font-size: 1.75rem;
+    font-size: 1.76rem;
   }
 
   .aboutme-description {

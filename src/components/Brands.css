@@ -147,6 +147,7 @@
 
   .brands-grid {
     gap: 0.75rem;
+    width: 100%;
   }
 
   .brand-large {
