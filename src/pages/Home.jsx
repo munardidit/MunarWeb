@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import MunarNavbar from '../components/MunarNavbar';
 import BrandAccordion from '../components/BrandServices';
 import Brands from '../components/Brands';
@@ -10,6 +11,7 @@ import Footer from '../components/Footer';
 export default function Home() {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const words = ['Different!', 'Unique!', 'Memorable!', 'Functional!', 'Bold!'];
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -18,6 +20,19 @@ export default function Home() {
 
     return () => clearInterval(interval);
   }, [words.length]);
+
+  //View Projects button handler 
+  const handleViewProjects = () => {
+    navigate('/works');
+  };
+
+  // Hire Munar button handler
+  const handleHireMunar = () => {
+    const footer = document.querySelector('.footer');
+    if (footer) {
+      footer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   // Hero title animation variants
   const titleVariants = {
@@ -51,13 +66,13 @@ export default function Home() {
       }
     },
     exit: {
-  opacity: 2,
-    transition: {
-      duration: 1.0,
-      ease: "easeIn"
-}
-  }
-};
+      opacity: 2,
+      transition: {
+        duration: 1.0,
+        ease: "easeIn"
+      }
+    }
+  };
 
   // Button animation
   const buttonContainerVariants = {
@@ -155,6 +170,7 @@ export default function Home() {
                   color: "#000"
                 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={handleViewProjects}
               >
                 View Projects
               </motion.button>
@@ -167,6 +183,7 @@ export default function Home() {
                   boxShadow: "0 5px 20px rgba(37, 99, 235, 0.4)"
                 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={handleHireMunar}
               >
                 Hire Munar
               </motion.button>
