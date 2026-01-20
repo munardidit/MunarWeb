@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import './Testimonial.css';
 import TestimoniImage from '../assets/testimoni.png';
 import TestimoniImage2 from '../assets/reed.jpg';
+import TestimoniImage3 from '../assets/DapoSville.jpeg';
 
 export default function Testimonial() {
   const testimonials = [
@@ -19,20 +20,20 @@ export default function Testimonial() {
     {
       id: 2,
       rating: 5,
+      text: "Munar is exceptional at this, he delivered timely and within budget.",
+      name: "Dapo .F",
+      title: "Co-Founder, Starkville Tech",
+      location: "Canada",
+      avatar: TestimoniImage3  
+    },
+    {
+     id: 3,
+      rating: 5,
       text: "Lorem ipsum dolor sit amet, consect etur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor sit amet, consect etur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolor sit etur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
       name: "Dr. Benedicta",
       title: "Founder, Onikam Hair",
       location: "United Kingdom",
-      avatar: TestimoniImage 
-    },
-    {
-      id: 3,
-      rating: 5,
-      text: "Lorem ipsum dolor sit amet, consect etur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor sit amet, consect etur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolor sit etur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-      name: "Dapo",
-      title: "Co-Founder, Starkville Tech",
-      location: "Canada",
-      avatar: TestimoniImage 
+      avatar: TestimoniImage  
     }
   ];
 
