@@ -10,6 +10,7 @@ import GearImage from '../assets/gearss.jpg';
 import StarkvilleImage from '../assets/gear.jpg';
 import YaffeImage from '../assets/yaffe.jpg';
 import BankImage from '../assets/bank.jpg';
+import Travumax from '../assets/Travumax.jpg';
 
 export default function Works() {
   const projects = [
@@ -47,6 +48,14 @@ export default function Works() {
     },
     {
       id: 5,
+      title: "Travumax Travel Agency",
+      description: "Travel Agency Brand, Lagos Nigeria.",
+      image: Travumax, 
+      category: "Travel",
+      link: "https://www.behance.net/gallery/242322051/Travel-Agency-Brand-Design-%28TRAVUMAX%29"
+    },
+    {
+      id: 6,
       title: "Yaffe Skin Brand",
       description: "Skin care brand, Lagos Nigeria",
       image: YaffeImage,
@@ -54,7 +63,7 @@ export default function Works() {
       link: "https://www.behance.net/gallery/180153777/SKIN-CARE-BRAND-%28Yaffe-Skin%29-Logo-Design"
     },
     {
-      id: 6,
+      id: 7,
       title: "The Tellar Brand",
       description: "Finance Brand, Dummy Project.",
       image: BankImage, 
