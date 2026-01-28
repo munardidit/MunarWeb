@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './Testimonial.css';
-import TestimoniImage from '../assets/testimoni.png';
+import TestimoniImage from '../assets/testimony.jpg';
 import TestimoniImage2 from '../assets/reed.jpg';
 import TestimoniImage3 from '../assets/DapoSville.jpeg';
 
@@ -29,8 +29,8 @@ export default function Testimonial() {
     {
      id: 3,
       rating: 5,
-      text: "Lorem ipsum dolor sit amet, consect etur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor sit amet, consect etur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolor sit etur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-      name: "Dr. Benedicta",
+      text: "Seamless experience working with Munar. He brings his creativity on every project we collaborated on.",
+      name: "Omieibi Bagshaw",
       title: "Founder, Onikam Hair",
       location: "United Kingdom",
       avatar: TestimoniImage  
