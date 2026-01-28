@@ -10,7 +10,7 @@ export default function BrandAccordion() {
     {
       title: "Outstanding visual Identity",
       subtitle: "Design.",
-      content: "Ignore the jargon. This is just saying that I take your idea and give it a recognizable and memorable face that aligns with your vision, goals and customers."
+      content: " This is just saying that I take your idea and give it a recognizable and memorable face that aligns with your vision, goals and customers."
     },
     {
       title: "Overall Brand Design",
