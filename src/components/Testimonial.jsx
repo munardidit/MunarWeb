@@ -1,4 +1,3 @@
-// Testimonial.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import './Testimonial.css';
@@ -31,8 +30,8 @@ export default function Testimonial() {
       rating: 5,
       text: "Seamless experience working with Munar. He brings his creativity on every project we collaborated on.",
       name: "Omieibi Bagshaw",
-      title: "Founder, Onikam Hair",
-      location: "United Kingdom",
+      title: "The People's Fund",
+      location: "Ghana",
       avatar: TestimoniImage  
     }
   ];
