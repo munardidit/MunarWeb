@@ -278,13 +278,22 @@ html {
   .navbar-logo img {
     height: 2rem;
   }
+  .navbar-container{
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.95);
+  border-bottom: 1px solid rgba(21, 21, 232, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  }
 
   .navbar-scrolled .navbar-logo img {
     height: 1.75rem;
   }
 }
 
-/* Hero Section Styles (keeping your original hero styles) */
+/* Hero Section */
 .hero-section {
   position: relative;
   z-index: 10;
@@ -294,9 +303,9 @@ html {
 }
 
 .hero-container {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 8rem 2rem;
+  
 }
 
 .hero-content {
@@ -425,7 +434,7 @@ html {
   .hero-title {
     font-size: 1.7rem;
     position: relative;
-    left: -3rem;
+    left: 0rem;
   }
 
   .button-group {
@@ -435,7 +444,7 @@ html {
     margin-top: 3rem;
     flex-wrap: wrap;
     position: relative;
-    left: -8rem;
+    left: -6rem;
   }
 
   .btn {

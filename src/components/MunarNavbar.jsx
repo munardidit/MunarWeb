@@ -117,7 +117,7 @@ export default function MunarNavbar() {
     e.preventDefault();
     // Add your form submission logic here
     console.log('Form submitted:', formData);
-    // You can add email service integration here (e.g., EmailJS, FormSubmit, etc.)
+    // email service integration here
     alert('Message sent successfully!');
     closeContactModal();
   };
