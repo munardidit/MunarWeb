@@ -1,11 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import './Brands.css';
 import OnikamImage from '../assets/Onikam.jpg';
 import SvilleCardImage from '../assets/Pedge49.jpg';
 import HelmetImage from '../assets/head.jpg';
 
 export default function Brands() {
+  const navigate = useNavigate();
+
   const brandImages = [
     {
       id: 1,
@@ -65,6 +68,10 @@ export default function Brands() {
         delay: 0.8
       }
     }
+  };
+
+  const handleViewMore = () => {
+    navigate('/works');
   };
 
   return (
@@ -130,6 +137,7 @@ export default function Brands() {
         >
           <motion.button 
             className="btn-view-more"
+            onClick={handleViewMore}
             whileHover={{ 
               scale: 1.05,
               backgroundColor: "#1d4ed8"

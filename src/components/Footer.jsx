@@ -45,7 +45,7 @@ export default function Footer() {
 
         <div className="footer-right">
           <div className="newsletter-section">
-            <h3 className="newsletter-title">Newsletter</h3>
+            <h3 className="newsletter-title"> Subscribe For Our Monthly Flyer</h3>
             <form onSubmit={handleSubmit} className="newsletter-form">
               <input
                 type="email"
