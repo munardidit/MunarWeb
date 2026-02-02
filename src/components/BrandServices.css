@@ -1,6 +1,5 @@
 .brand-accordion-container {
-  background-color: #000000;
-  
+  background-color: #121212;
   color: #F2F2F9;
   font-family: zalando-sans-expanded, sans-serif;
 }
@@ -95,7 +94,9 @@
   width:100%;
 }
 
-
+brand-accordion-wrapper {
+  max-width: 100%;
+}
 
 }
 @media (min-width: 768px) {

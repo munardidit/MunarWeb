@@ -291,6 +291,7 @@ html {
   .navbar-scrolled .navbar-logo img {
     height: 1.75rem;
   }
+  
 }
 
 /* Hero Section */
@@ -433,8 +434,11 @@ html {
 @media (max-width: 480px) {
   .hero-title {
     font-size: 1.7rem;
+    width: 46%;
+    line-height:2.4rem ;
     position: relative;
-    left: 0rem;
+    left: 0rem
+    
   }
 
   .button-group {
@@ -446,7 +450,15 @@ html {
     position: relative;
     left: -6rem;
   }
-
+hero-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 2rem;
+  right: 2rem;
+  height: 1px;
+  background: #1515E8;
+}
   .btn {
     padding: 0.75rem 2rem;
     font-size: 0.7rem;
