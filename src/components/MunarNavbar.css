@@ -690,3 +690,17 @@ body.modal-open {
     width: 100%;
   }
 }
+
+@media (max-width: 289px) {
+  navbar-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem 2rem;
+  position: relative;
+  left: -3px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.95);
+  border-bottom: 1px solid rgba(21, 21, 232, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+}
