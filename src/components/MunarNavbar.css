@@ -604,7 +604,15 @@ hero-container::after {
   min-height: 120px;
 }
 
+/* Button Group for Modal */
+.modal-button-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
 .modal-submit-btn {
+  flex: 1;
   padding: 14px 28px;
   background: #1515E8;
   color: white;
@@ -614,7 +622,6 @@ hero-container::after {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 10px;
 }
 
 .modal-submit-btn:hover {
@@ -625,6 +632,39 @@ hero-container::after {
 
 .modal-submit-btn:active {
   transform: translateY(0);
+}
+
+/* WhatsApp Button */
+.modal-whatsapp-btn {
+  flex: 1;
+  padding: 14px 28px;
+  background: #25D366;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.modal-whatsapp-btn:hover {
+  background: #20bd5a;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+}
+
+.modal-whatsapp-btn:active {
+  transform: translateY(0);
+}
+
+.whatsapp-icon {
+  width: 20px;
+  height: 20px;
 }
 
 body.modal-open {
@@ -639,5 +679,14 @@ body.modal-open {
 
   .modal-title {
     font-size: 24px;
+  }
+  
+  .modal-button-group {
+    flex-direction: column;
+  }
+  
+  .modal-submit-btn,
+  .modal-whatsapp-btn {
+    width: 100%;
   }
 }
