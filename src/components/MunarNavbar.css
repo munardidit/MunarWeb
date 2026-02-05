@@ -5,9 +5,14 @@
   font-family: "Zalando Sans Expanded", sans-serif;
 }
 
-/* Smooth scroll */
+/* Prevent horizontal scroll */
 html {
+  overflow-x: hidden;
   scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 /* Navbar Styles */
@@ -275,23 +280,32 @@ html {
 
 /* Small Mobile */
 @media (max-width: 480px) {
+  .hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #F2F2F9;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+  
   .navbar-logo img {
     height: 2rem;
   }
-  .navbar-container{
-  width: 90%;
-  max-width: 90%;
-  margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.95);
-  border-bottom: 1px solid rgba(21, 21, 232, 0.3);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-
+  
+  .navbar-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.95);
+    border-bottom: 1px solid rgba(21, 21, 232, 0.3);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .navbar-scrolled .navbar-logo img {
     height: 1.75rem;
   }
-  
 }
 
 /* Hero Section */
@@ -306,7 +320,6 @@ html {
 .hero-container {
   max-width: 1200px;
   margin: 0 auto;
-  
 }
 
 .hero-content {
@@ -435,10 +448,9 @@ html {
   .hero-title {
     font-size: 1.7rem;
     width: 46%;
-    line-height:2.4rem ;
+    line-height: 2.4rem;
     position: relative;
-    left: 0rem
-    
+    left: 0rem;
   }
 
   .button-group {
@@ -450,15 +462,17 @@ html {
     position: relative;
     left: -6rem;
   }
-hero-container::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 2rem;
-  right: 2rem;
-  height: 1px;
-  background: #1515E8;
-}
+  
+  .hero-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 2rem;
+    right: 2rem;
+    height: 1px;
+    background: #1515E8;
+  }
+  
   .btn {
     padding: 0.75rem 2rem;
     font-size: 0.7rem;
@@ -471,17 +485,65 @@ hero-container::after {
   }
 }
 
-@media (min-width: 280px) and (max-width: 320px) {
+/* Z Fold 4 folded (cover screen) - 280-289px width */
+@media (max-width: 289px) {
+  .navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .navbar-logo img {
+    height: 1.8rem;
+  }
+  
+  .navbar-scrolled .navbar-logo img {
+    height: 1.5rem;
+  }
+  
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1000;
+    position: relative;
+  }
+  
+  .hamburger span {
+    display: block;
+    height: 2.5px;
+    width: 100%;
+    background: #F2F2F9;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+  
   .hero-title {
-    font-size: 0.8rem;
-    left: -2rem;
+    font-size: 1.2rem;
+    left: 0;
+    width: 100%;
+    line-height: 1.8rem;
   }
 
   .button-group {
     flex-direction: column;
     position: relative;
-    left: -6rem;
-    width: 30%;
+    left: 0;
+    width: 100%;
+  }
+  
+  .btn {
+    width: 50%;
+    font-size: 0.65rem;
+    padding: 0.6rem 1.5rem;
   }
 }
 
@@ -504,7 +566,7 @@ hero-container::after {
   background: black;
   color: #e0e0e0;
   border-radius: 16px;
-  border:1px solid #1515E8;
+  border: 1px solid #1515E8;
   padding: 40px;
   max-width: 500px;
   width: 100%;
@@ -531,7 +593,7 @@ hero-container::after {
   background: none;
   border: none;
   font-size: 32px;
-  color:#e0e0e0;
+  color: #e0e0e0;
   cursor: pointer;
   width: 36px;
   height: 36px;
@@ -552,12 +614,12 @@ hero-container::after {
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 8px;
-  color:#e0e0e0;
+  color: #e0e0e0;
 }
 
 .modal-subtitle {
   font-size: 14px;
-  color:#e0e0e0;
+  color: #e0e0e0;
   margin-bottom: 30px;
 }
 
@@ -585,7 +647,7 @@ hero-container::after {
   padding: 12px 16px;
   border: 0.7px solid #e0e0e0;
   background: #1a1a1a;
-  color:white;
+  color: white;
   border-radius: 8px;
   font-size: 14px;
   font-family: "Zalando Sans Expanded", sans-serif;
@@ -689,18 +751,4 @@ body.modal-open {
   .modal-whatsapp-btn {
     width: 100%;
   }
-}
-
-@media (max-width: 289px) {
-  navbar-container {
-  width: 100%;
-  max-width: 100%;
-  padding: 1rem 2rem;
-  position: relative;
-  left: -3px;
-  margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.95);
-  border-bottom: 1px solid rgba(21, 21, 232, 0.3);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
 }
