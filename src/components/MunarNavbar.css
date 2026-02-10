@@ -451,6 +451,7 @@ body {
     line-height: 2.4rem;
     position: relative;
     left: 0rem;
+    bottom:3rem;
   }
 
   .button-group {
@@ -460,9 +461,9 @@ body {
     margin-top: 3rem;
     flex-wrap: wrap;
     position: relative;
-    left: -6rem;
+    left: -5rem;
+    
   }
-  
   .hero-container::after {
     content: '';
     position: absolute;
@@ -475,11 +476,11 @@ body {
   
   .btn {
     padding: 0.75rem 2rem;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     font-weight: 500;
     border: 1px solid #F2F2F9;
     cursor: pointer;
-    width: 35%;
+    width: 32.6%;
     align-self: flex-end;
     transition: all 0.3s ease;
   }
@@ -541,8 +542,8 @@ body {
   }
   
   .btn {
-    width: 50%;
-    font-size: 0.65rem;
+    width: 40%;
+    font-size: 0.62rem;
     padding: 0.6rem 1.5rem;
   }
 }
