@@ -445,7 +445,7 @@ body {
 }
 @media (max-width: 428px) {
    .hero-title {
-    font-size: 1.7rem;
+    font-size: 1.785rem;
     width: 46%;
     line-height: 2.4rem;
     position: relative;
@@ -475,11 +475,11 @@ body {
 }
 @media (max-width: 440px) {
    .hero-title {
-    font-size: 1.7rem;
+    font-size: 1.785rem;
     width: 46%;
     line-height: 2.4rem;
     position: relative;
-    left: 0rem;
+    left: 1rem;
     bottom:3rem;
   }
   .button-group {
@@ -489,7 +489,7 @@ body {
     margin-top: 3rem;
     flex-wrap: wrap;
     position: relative;
-    left: -3em;
+    left: -4em;
     
   }
   .btn {
@@ -505,11 +505,11 @@ body {
 }
 @media (max-width: 400px) {
   .hero-title {
-    font-size: 1.7rem;
+    font-size: 1.78rem;
     width: 46%;
     line-height: 2.4rem;
     position: relative;
-    left: 0rem;
+    left: 1rem;
     bottom:3rem;
   }
   .button-group {
@@ -519,12 +519,12 @@ body {
     margin-top: 3rem;
     flex-wrap: wrap;
     position: relative;
-    left: -5em;
+    left: -6em;
     
   }
   .btn {
     padding: 0.75rem 2rem;
-    font-size: 0.52rem;
+    font-size: 0.53rem;
     font-weight: 500;
     border: 1px solid #F2F2F9;
     cursor: pointer;
@@ -535,11 +535,11 @@ body {
 }
 @media (max-width: 360px) {
   .hero-title {
-    font-size: 1.7rem;
-    width: 46%;
+    font-size: 1.785rem;
+    width: 47%;
     line-height: 2.4rem;
     position: relative;
-    left: 0rem;
+    left: 1rem;
     bottom:3rem;
   }
 
@@ -550,7 +550,7 @@ body {
     margin-top: 3rem;
     flex-wrap: wrap;
     position: relative;
-    left: -7em;
+    left: -8em;
     
   }
   .hero-container::after {
@@ -618,7 +618,7 @@ body {
   
   .hero-title {
     font-size: 1.2rem;
-    left: 0;
+    left: 1rem;
     width: 100%;
     line-height: 1.8rem;
   }
@@ -626,7 +626,7 @@ body {
   .button-group {
     flex-direction: column;
     position: relative;
-    left: 0;
+    left: 1rem;
     width: 100%;
   }
   
